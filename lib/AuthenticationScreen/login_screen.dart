@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 import 'package:rent_flow_project/Utils/AppColors.dart';
+import 'package:rent_flow_project/Utils/screen_path.dart';
 import 'package:rent_flow_project/Views/simple_text_view.dart';
 
 import '../Utils/ImagePath.dart';
@@ -70,15 +72,19 @@ class LoginScreen extends ConsumerWidget {
                       ),
                     ),
                     Constants.setHeightAndWidth(context, height: 4.8),
-                    SimpleButton(
-                      height: 5.7,
-                      horizontalPadding: 4.9,
-                      onClick: () {
-                        print(ref.read(phoneTextController).text);
-                      },
-                      color: AppColors.buttonColor,
-                      title: "Send OTP",
-                      radius: 1.3,
+                    Hero(
+                      tag: 'button',
+                      child: SimpleButton(
+                        height: 5.7,
+                        horizontalPadding: 4.9,
+                        onClick: () {
+                          print(ref.read(phoneTextController).text);
+                          Get.toNamed(ScreenPath.otpScreen);
+                        },
+                        color: AppColors.buttonColor,
+                        title: "Send OTP",
+                        radius: 1.3,
+                      ),
                     ),
                     Constants.setHeightAndWidth(context, height: 5.3),
                     Padding(

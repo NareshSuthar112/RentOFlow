@@ -37,15 +37,18 @@ class InfoScreen extends StatelessWidget {
                   ),
                 ),
                 Constants.setHeightAndWidth(context, height: 10.7),
-                SimpleButton(
-                  height: 5.7,
-                  horizontalPadding: 4.9,
-                  onClick: () {
-                    Get.offAllNamed(ScreenPath.loginScreen);
-                  },
-                  color: AppColors.buttonColor,
-                  title: "Get Started",
-                  radius: 1.3,
+                Hero(
+                  tag: 'button',
+                  child: SimpleButton(
+                    height: 5.7,
+                    horizontalPadding: 4.9,
+                    onClick: () {
+                      Get.offAllNamed(ScreenPath.loginScreen);
+                    },
+                    color: AppColors.buttonColor,
+                    title: "Get Started",
+                    radius: 1.3,
+                  ),
                 ),
               ],
             ),

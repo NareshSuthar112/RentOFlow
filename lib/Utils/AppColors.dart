@@ -7,4 +7,5 @@ class AppColors {
   static var normalDarkGrey = HexColor("#414141");
   static var normalLightBlue = HexColor("#2781EB");
   static var normalGrey = HexColor("#C5C5C5");
+  static var otpLabelTextColor = HexColor("#C79E1C");
 }
